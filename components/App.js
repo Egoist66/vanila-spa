@@ -11,11 +11,7 @@ export const App = ({name}) => {
 
 
 
-            <main>
-            
-               
-            
-            </main>
+            <main></main>
         </div>
     `
 }
