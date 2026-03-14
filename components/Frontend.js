@@ -1,0 +1,1 @@
+export const Frontend = () => `<h1>Frontend</h1>`   
