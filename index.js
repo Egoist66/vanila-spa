@@ -14,7 +14,7 @@ root.render({
 
         const { changeRandomName, button } = useChangeName();
 
-        button.addEventListener("click", () => changeRandomName(userStore.user));
+        button.addEventListener("click", () => changeRandomName(userStore));
     }],
     props: {
         name: App.name,
