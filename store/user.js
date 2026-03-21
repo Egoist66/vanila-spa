@@ -1,8 +1,19 @@
-import { createReactiveStore } from "../lib/reactive";
+import { reactive } from "../lib/reactive.js";
 
-export const userStore = createReactiveStore({
-  name: "John Doe",
-  age: 30,
-});
+export const userStore = reactive({
+    user: {
+        name: "John",
+        age: 30,
+    }
+}, {deep: true});
 
-userStore.subscribe("name", (name) => console.log("Name changed:", name));
+const unsubscribe = userStore.subscribe("user", (name) =>
+  console.log("Name changed:", name),
+);
+
+window.userStore = userStore;
+
+// const timer = setTimeout(() => {
+//   unsubscribe();
+//   clearTimeout(timer);
+// }, 5000);
